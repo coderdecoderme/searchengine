@@ -12,76 +12,73 @@
 
 	
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <title>SEARCH ENGINE | SEARCH</title>
+	<title>Welcome to Doodle</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
-    <!-- BASE WRAPPER -->
-<div class="wrapper">
-	<!-- HEADER -->
-    <div class="header">
-        <!-- HEADER CONTENT -->
-        <div class="headerContent">
 
-            <div class="logoContainer">
-                <a href="index.php">
-                    <img src="img/doodleLogo.png">
-                </a>
-            </div>
-
-            <!-- SEARCH CONTAINER -->
-            <div class="searchContainer">
-
-                <form action="search.php" method="GET">
-
-                    <div class="searchBarContainer">
-                        <!-- SEARCH INPUT -->
-                        <input class="searchBox" type="text" name="term">
-                        <button class="searchButton">
-                            <img src="img/search.png">
-                        </button>
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
-        <!-- SITES & IMAGES TAB -->
-        <div class="tabsContainer">
-
-            <ul class="tabList">
-
-                <li class="<?php echo $type == 'sites' ? 'active' : '' ?>">
-                    <a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
-                    Sites
-                </a>
-                </li>
-
-                <li class="<?php echo $type == 'images' ? 'active' : '' ?>">
-                    <a href='<?php echo "search.php?term=$term&type=images"; ?>'>
-                        Images
-                    </a>
-                </li>
-
-            </ul>
+	<div class="wrapper">
+	
+		<div class="header">
 
 
-        </div>
+			<div class="headerContent">
+
+				<div class="logoContainer">
+					<a href="index.php">
+						<img src="assets/images/doodleLogo.png">
+					</a>
+				</div>
+
+				<div class="searchContainer">
+
+					<form action="search.php" method="GET">
+
+						<div class="searchBarContainer">
+
+							<input class="searchBox" type="text" name="term">
+							<button class="searchButton">
+								<img src="assets/images/icons/search.png">
+							</button>
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+
+			<div class="tabsContainer">
+
+				<ul class="tabList">
+
+					<li class="<?php echo $type == 'sites' ? 'active' : '' ?>">
+						<a href='<?php echo "search.php?term=$term&type=sites"; ?>'>
+							Sites
+						</a>
+					</li>
+
+					<li class="<?php echo $type == 'images' ? 'active' : '' ?>">
+						<a href='<?php echo "search.php?term=$term&type=images"; ?>'>
+							Images
+						</a>
+					</li>
+
+				</ul>
+
+
+			</div>
 
 
 
-    </div>
-</div>
+		</div>
+	</div>
 
 </body>
 </html>
